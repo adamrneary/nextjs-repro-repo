@@ -4,6 +4,7 @@ const withTM = require('next-transpile-modules')([
 
 module.exports = withTM({
   productionBrowserSourceMaps: true,
+  outputFileTracing: false,
   webpack: (config) => {
     // Monaco does some insanity that requires a special loader to compile.
     // It's predominently an `ssr: false` scenario, but this plugin covers the rest.
